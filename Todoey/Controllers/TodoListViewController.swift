@@ -1,5 +1,6 @@
 import UIKit
 import AVFoundation
+import UserNotifications
 
 class TodoListViewController: UITableViewController {
 
@@ -8,8 +9,31 @@ class TodoListViewController: UITableViewController {
     var userLoggedIn: String?
     var dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
     
+    
+    
 //    let defaults = UserDefaults.standard
 //                   // an interface to the user's default's db where you store key-value pairs persistently accross launches of your app
+    
+    func scheduleLocalNotification(forTaskTitle taskTitle: String, withTimeInterval timeInterval: TimeInterval) {
+        let content = UNMutableNotificationContent()
+        content.title = "Task Reminder"
+        content.body = "It's time to complete your task: \(taskTitle)"
+        content.sound = UNNotificationSound.default
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "taskReminder", content: content, trigger: trigger)
+
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("Failed to schedule notification: \(error)")
+            } else {
+                print("Notification scheduled successfully")
+            }
+        }
+    }
+
+
     
     func playSound() {
         if let soundURL = Bundle.main.url(forResource: "save", withExtension: "mp3") {
@@ -26,6 +50,14 @@ class TodoListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            if granted {
+                print("Notification authorization granted")
+            } else {
+                print("Notification authorization denied")
+            }
+        }
         
         dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent(userLoggedIn!)
         
@@ -85,6 +117,11 @@ class TodoListViewController: UITableViewController {
             self.itemArray.append(newItem)
             print("Trying to play sound")
             self.playSound()
+
+            let taskTitle = textField.text ?? ""
+            let timeInterval: TimeInterval = 30 // time in seconds
+            self.scheduleLocalNotification(forTaskTitle: taskTitle, withTimeInterval: timeInterval)
+
             self.saveItems()
         }
 
@@ -123,6 +160,7 @@ class TodoListViewController: UITableViewController {
         itemArray = []
         saveItems()
     }
+    
 }
 
 
