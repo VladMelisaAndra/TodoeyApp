@@ -9,11 +9,6 @@ class TodoListViewController: UITableViewController {
     var userLoggedIn: String?
     var dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
     
-    
-    
-//    let defaults = UserDefaults.standard
-//                   // an interface to the user's default's db where you store key-value pairs persistently accross launches of your app
-    
     func scheduleLocalNotification(forTaskTitle taskTitle: String, withTimeInterval timeInterval: TimeInterval) {
         let content = UNMutableNotificationContent()
         content.title = "Task Reminder"
@@ -119,7 +114,7 @@ class TodoListViewController: UITableViewController {
             self.playSound()
 
             let taskTitle = textField.text ?? ""
-            let timeInterval: TimeInterval = 30 // time in seconds
+            let timeInterval: TimeInterval = 300 // time in seconds
             self.scheduleLocalNotification(forTaskTitle: taskTitle, withTimeInterval: timeInterval)
 
             self.saveItems()

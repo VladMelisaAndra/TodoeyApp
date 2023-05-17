@@ -7,10 +7,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // this gets called when your app gets loaded up, this is the first thing that happens before the viewDidLoad inside the first view controller
-        // print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String)
-        
-        // Override point for customization after application launch.
         return true
     }
 
