@@ -4,6 +4,7 @@ import UIKit
 class MotivationViewController: UIViewController {
     
     @IBOutlet weak var quoteTextLabel: UILabel!
+    @IBOutlet weak var shareButton: UIButton!
     
     var quoteManager = QuoteManager()
     
@@ -15,6 +16,12 @@ class MotivationViewController: UIViewController {
         quoteManager.getQuote()
 
     }
+    
+    @IBAction func shareButtonClicked(_ sender: UIButton) {
+            let quoteText = quoteTextLabel.text ?? ""
+            let shareActivity = UIActivityViewController(activityItems: [quoteText], applicationActivities: nil)
+            present(shareActivity, animated: true, completion: nil)
+        }
     
 }
 

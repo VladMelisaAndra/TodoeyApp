@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E2F03642A152CDA0040AD2E /* save.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E2F03632A152CDA0040AD2E /* save.mp3 */; };
 		345A532B28B500DD00F34C51 /* 13_generated.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 345A532A28B500DD00F34C51 /* 13_generated.jpg */; };
 		345A532D28B500F900F34C51 /* joanna-kosinska-129039.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 345A532C28B500F900F34C51 /* joanna-kosinska-129039.jpg */; };
 		345A532F28B506EF00F34C51 /* btn_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 345A532E28B506EF00F34C51 /* btn_delete.png */; };
@@ -28,7 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		345A532A28B500DD00F34C51 /* 13_generated.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 13_generated.jpg; path = "../../../../../Downloads/vecteezy_light-bulb-vector-bulb-light-icon-bulb-light-vector_2915335 2/13_generated.jpg"; sourceTree = "<group>"; };
+		0E2F03632A152CDA0040AD2E /* save.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = save.mp3; path = ../../../../Downloads/save.mp3; sourceTree = "<group>"; };
+		345A532A28B500DD00F34C51 /* 13_generated.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 13_generated.jpg; path = "../../../../../../../../Desktop/TodoeyApp/Todoey/Supporting Files/13_generated.jpg"; sourceTree = BUILT_PRODUCTS_DIR; };
 		345A532C28B500F900F34C51 /* joanna-kosinska-129039.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "joanna-kosinska-129039.jpg"; sourceTree = "<group>"; };
 		345A532E28B506EF00F34C51 /* btn_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_delete.png; sourceTree = "<group>"; };
 		34634DE128B3AD1D00B1FE6F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				3494336D28B4EF550020886C /* 1694_U1RVRElPIEtBVCAzOTItMTE.jpg */,
 				3494336128B3FD8F0020886C /* 2.png */,
+				0E2F03632A152CDA0040AD2E /* save.mp3 */,
 				3494335F28B3FD2B0020886C /* 5.png */,
 				3494336328B3FEB50020886C /* background_3.jpg */,
 				EB2BE502239524DC00FB933B /* Assets.xcassets */,
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB2BE506239524DC00FB933B /* LaunchScreen.storyboard in Resources */,
+				0E2F03642A152CDA0040AD2E /* save.mp3 in Resources */,
 				345A532B28B500DD00F34C51 /* 13_generated.jpg in Resources */,
 				3494336028B3FD2B0020886C /* 5.png in Resources */,
 				3494336E28B4EF550020886C /* 1694_U1RVRElPIEtBVCAzOTItMTE.jpg in Resources */,

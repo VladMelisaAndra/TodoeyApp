@@ -1,13 +1,28 @@
 import UIKit
+import AVFoundation
 
 class TodoListViewController: UITableViewController {
 
+    var audioPlayer: AVAudioPlayer?
     var itemArray = [ItemData]()
     var userLoggedIn: String?
     var dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
     
 //    let defaults = UserDefaults.standard
 //                   // an interface to the user's default's db where you store key-value pairs persistently accross launches of your app
+    
+    func playSound() {
+        if let soundURL = Bundle.main.url(forResource: "save", withExtension: "mp3") {
+            do {
+                print("Sound played")
+                audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                audioPlayer?.play()
+            } catch {
+                print("Error, could not play sound: \(error)")
+            }
+        }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,15 +80,14 @@ class TodoListViewController: UITableViewController {
         }
         
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
-            // what will happen once the user clicks the Add Item button on our UIAlert
             let newItem = ItemData()
             newItem.title = textField.text!
-            
             self.itemArray.append(newItem)
+            print("Trying to play sound")
+            self.playSound()
             self.saveItems()
-            
-//            self.defaults.set(self.itemArray, forKey: "TodoListArray")
         }
+
         
         alert.addAction(action)
         
