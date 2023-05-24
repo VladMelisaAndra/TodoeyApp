@@ -29,8 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E2F03632A152CDA0040AD2E /* save.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = save.mp3; path = ../../../../Downloads/save.mp3; sourceTree = "<group>"; };
-		345A532A28B500DD00F34C51 /* 13_generated.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 13_generated.jpg; path = "../../../../../../../../Desktop/TodoeyApp/Todoey/Supporting Files/13_generated.jpg"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E2F03632A152CDA0040AD2E /* save.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = save.mp3; path = "Todoey/Supporting Files/save.mp3"; sourceTree = SOURCE_ROOT; };
+		345A532A28B500DD00F34C51 /* 13_generated.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 13_generated.jpg; path = "Todoey/Supporting Files/13_generated.jpg"; sourceTree = SOURCE_ROOT; };
 		345A532C28B500F900F34C51 /* joanna-kosinska-129039.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "joanna-kosinska-129039.jpg"; sourceTree = "<group>"; };
 		345A532E28B506EF00F34C51 /* btn_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_delete.png; sourceTree = "<group>"; };
 		34634DE128B3AD1D00B1FE6F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };

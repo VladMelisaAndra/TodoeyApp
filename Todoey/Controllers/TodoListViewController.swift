@@ -114,7 +114,7 @@ class TodoListViewController: UITableViewController {
             self.playSound()
 
             let taskTitle = textField.text ?? ""
-            let timeInterval: TimeInterval = 300 // time in seconds
+            let timeInterval: TimeInterval = 20 // time in seconds
             self.scheduleLocalNotification(forTaskTitle: taskTitle, withTimeInterval: timeInterval)
 
             self.saveItems()
